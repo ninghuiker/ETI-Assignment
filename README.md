@@ -7,3 +7,8 @@ THINGS TO DO!!!
 3. View Maze
 4. Play Maze Game
 5. Configure Current Maze
+
+
+LANGUAGES CHOSEN
+1. Python
+2. Pytest
