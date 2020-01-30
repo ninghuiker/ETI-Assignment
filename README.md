@@ -19,7 +19,9 @@
 - Unit Testing
 - QA Testing
 
-<< 3rd Feb - 6th Feb >>
+<< 3rd Feb - 4th Feb >>
 - Finish up Final Functional Application
+
+<< 4th Feb - 6th Feb >>
 - Conduct Final Unit Testings
 - Conduct Final QA Testings
