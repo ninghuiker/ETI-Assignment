@@ -1,4 +1,6 @@
 from read_and_load import *
+import csv
+
 
 def mainMenu():
     print("""Main Menu
@@ -11,6 +13,7 @@ def mainMenu():
 [0] Exit Maze\n""")
 
 
+
     while True:
         try:
             selection = int(input('Enter your input:'))
@@ -18,7 +21,12 @@ def mainMenu():
                 Read_Load()
                 break
             elif selection==2:
-                View()
+                print("=========================================")
+                
+                with open('maze.csv') as csvfile:
+                    readCSV = csv.reader(csvfile, delimiter=',')
+                    for row in readCSV:
+                          print(row)
                 break
             elif selection==0:
                 quit()
