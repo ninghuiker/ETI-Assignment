@@ -1,6 +1,8 @@
 from read_and_load import *
 
+
 def mainMenu():
+    finalList = []
     print("""Main Menu
 =========
 [1] Read and load maze from file
@@ -10,19 +12,15 @@ def mainMenu():
 
 [0] Exit Maze\n""")
 
-
     while True:
         try:
             selection = int(input('Enter your input:'))
             if selection==1:
-                Read_Load()
-                break
+                Read_Load(finalList)
             elif selection==2:
-                View()
-                break
+                View_Maze(finalList)
             elif selection==0:
                 quit()
-                break
             else:
                 print("Invalid choice. Enter 1-5")
                 mainMenu()
