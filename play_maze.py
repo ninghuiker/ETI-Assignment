@@ -18,13 +18,16 @@ def Play_Maze():
             for column in row:
                 if column=="A":
                     colStart = columnN
-                    rowStart = rowN           
+                    rowStart = rowN
                 elif column=="B":
                     colEnd = columnN
                     rowEnd = rowN   
-
                 columnN += 1
             columnN = 0
 
         print("\nLocation of Start (A) = (Row " + str(colStart) + ", Column " + str(rowStart) + ")")
         print("Location of End (B) = (Row " + str(colEnd) + ", Column " + str(rowEnd) + ")\n")
+
+        move = input("Press 'W' for UP, 'A' for LEFT, 'S' for DOWN, 'D' for RIGHT, 'M' for MAIN MENU: ")
+                        
+                        
