@@ -1,5 +1,6 @@
 from read_and_load import *
 from view_maze import *
+from play_maze import *
 
 def mainMenu():
     print("""Main Menu
@@ -20,6 +21,9 @@ def mainMenu():
                 break
             elif selection==2:
                 View_Maze()
+                break
+            elif selection==3:
+                Play_Maze()
                 break
             elif selection==0:
                 quit()
