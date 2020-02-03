@@ -23,6 +23,7 @@ def mainMenu():
                 
                 View_Maze(finalList)
             elif selection==0:
+                print("Exit Maze")
                 quit()
             else:
                 print("Invalid choice. Enter 1-5")
