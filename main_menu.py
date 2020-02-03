@@ -22,7 +22,7 @@ def mainMenu():
             elif selection==2:
                 View_Maze(finalList)
             elif selection==3:
-                Play_Maze()
+                Play_Maze(finalList)
             elif selection==0:
                 quit()
             else:
