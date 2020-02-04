@@ -3,6 +3,7 @@ import pytest
 from main_menu import *
 
 def test_mainmenu():
+    menu = mainMenu()
     assert ("""Main Menu
 =========
 [1] Read and load maze from file
