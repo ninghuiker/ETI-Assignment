@@ -6,18 +6,21 @@ def Read_Load(finalList):
     print('\nOption [1] Read and load maze from file')
     print('')
     userinput = input('Enter the name of the data file:')
-    if userinput == "":
-        print("\nError: please key in the name of the data file")
-        Read_Load()
+    
+    if userinput[-4:] == ".csv":
+        try:
+            file = open(userinput)
+            row = len(file.readlines())
+            print('Number of lines reads:', str(row))
+            if len(finalList) > 0:
+                finalList = []
+            save_data(finalList, userinput)
+        except:
+            print("\nError: please key in the name of the data file")
         
     else:
-        file = open(userinput)
-        row = len(file.readlines())
-        print('Number of lines reads:', str(row))
-        if len(finalList) > 0:
-            finalList = []
-        save_data(finalList, userinput)
-    
+        print("\nError: please key in an excel file")
+        #Read_Load() 
     
     anykey = input("\nEnter anything to return to Main Menu\n")
     return finalList
