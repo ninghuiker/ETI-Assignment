@@ -26,10 +26,10 @@ def mainMenu():
                 print("Exit Maze")
                 quit()
             else:
-                print("Invalid choice. Enter 1-5")
+                print("Invalid choice. Enter 1-4")
                 mainMenu()
         except ValueError:
-            print("Invalid syntax. Enter 1-5")
+            print("Invalid syntax. Enter 1-4")
     exit
 
 def Exit():
