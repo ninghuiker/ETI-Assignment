@@ -36,6 +36,7 @@ def Play_Maze(finalList):
             if upRow > -1:
                 upPos = finalList[upRow][upCol]
                 if upPos == "O":
+                    print("Move Successful!")
                     for item in finalList:
                         finalList[upRow][upCol] = "A"
                         finalList[rowStart][colStart] = "O"
@@ -57,6 +58,7 @@ def Play_Maze(finalList):
             if leftCol > -1:
                 leftPos = finalList[leftRow][leftCol]
                 if leftPos == "O":
+                    print("Move Successful!")
                     for item in finalList:
                         finalList[leftRow][leftCol] = "A"
                         finalList[rowStart][colStart] = "O"
@@ -79,6 +81,7 @@ def Play_Maze(finalList):
             if rowStart < 8:
                 downPos = finalList[downRow][downCol]
                 if downPos == "O":
+                    print("Move Successful!")
                     for item in finalList:
                         finalList[downRow][downCol] = "A"
                         finalList[rowStart][colStart] = "O"
@@ -100,6 +103,7 @@ def Play_Maze(finalList):
             if rightCol < 8:
                 rightPos = finalList[rightRow][rightCol]
                 if rightPos == "O":
+                    print("Move Successful!")
                     for item in finalList:
                         finalList[rightRow][rightCol] = "A"
                         finalList[rowStart][colStart] = "O"
