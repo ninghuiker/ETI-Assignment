@@ -13,6 +13,7 @@ def mainMenu():
 [4] Configure current maze
 
 [0] Exit Maze\n""")
+    #return False
 
     while True:
         try:
