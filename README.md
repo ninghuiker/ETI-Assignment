@@ -25,3 +25,12 @@
 << 4th Feb - 6th Feb >>
 - Conduct Final Unit Testings
 - Conduct Final QA Testings
+
+# Project Results Analysis (After Sprint #1)
+- Not everything was kept according to schedule
+- Most of the features are completed (Good start)
+- Did not set up plugins and utilise them properly
+- Further Improvements (For next sprint - Sprint #2)
+  - Keeping to schedule
+  - MUST: Fully utilise all plugins
+  - Finish up the remaining steps
