@@ -15,7 +15,7 @@ pipeline {
 
             post {
                 always {
-                    junit 'path/to/report.xml'
+                    junit(keepLongStdio: true, testResults: 'target/surefire-reports/TEST-*.xml')
                 }
             }
         }
