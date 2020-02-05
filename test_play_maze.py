@@ -1,6 +1,6 @@
 import pytest
 import mock
-import builtins
+#import builtins
 from play_maze import * 
 
 
