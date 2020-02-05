@@ -5,9 +5,6 @@ from play_maze import *
 
 
 # Test that the maze is displayed correctly
-def test_maze_display():
-    
-
 
 # Test that the move function allows 5 moves (WASD, M)
 def test_get_move():
