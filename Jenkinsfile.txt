@@ -12,6 +12,12 @@ pipeline {
             steps {
                 sh 'pytest --cov'
             }
+
+            post {
+                always {
+                    junit 'path/to/report.xml'
+                }
+            }
         }
     }
 }
