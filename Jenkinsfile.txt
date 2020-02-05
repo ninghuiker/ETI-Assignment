@@ -1,14 +1,17 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'python:3.7' } }
+    agent { dockerfile true }
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'python --version'
+                sh 'python -m compileall .'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'pytest --cov'
             }
         }
     }
 }
-
-
-
