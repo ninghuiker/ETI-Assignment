@@ -26,6 +26,9 @@
 - Conduct Final Unit Testings
 - Conduct Final QA Testings
 
+<< 6th Feb - 8th Feb >>
+- Finishing up anything that is still undone
+
 # Project Results Analysis (After Sprint #1)
 - Not everything was kept according to schedule
 - Most of the features are completed (Good start)
