@@ -23,7 +23,7 @@
 - Finish up Final Functional Application
 
 << 4th Feb - 6th Feb >>
-- Conduct Final Unit Testings
+- Conduct Final Unit Testings(7th feb need more time(due to unit test case unclear)
 - Conduct Final QA Testings
 
 << 6th Feb - 8th Feb >>
