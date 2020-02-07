@@ -10,7 +10,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'pytest  --cov --cov-fail-under 35 --junitxml=coverage.xml'
+                sh 'pytest  --cov --junitxml=coverage.xml'
             }
 
             post {
