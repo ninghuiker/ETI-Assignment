@@ -13,18 +13,18 @@ def mainMenu():
 [4] Configure current maze
 
 [0] Exit Maze\n""")
-    #return False
+    #return False (unit test case for menu)
 
     while True:
         try:
-            selection = int(input('Enter your input:'))
-            if selection==1:
+            selection = input('Enter your input:')
+            if selection=='1':
                 Read_Load(finalList)
-            elif selection==2:
+            elif selection=='2':
                 View_Maze(finalList)
-            elif selection==3:
+            elif selection=='3':
                 Play_Maze(finalList)
-            elif selection==0:
+            elif selection=='0':
                 quit()
             else:
                 print("Invalid choice. Enter 1-5")
