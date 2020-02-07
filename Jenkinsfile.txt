@@ -10,12 +10,12 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'pytest --cov'
+                sh 'pytest  --cov --cov-fail-under 35 --junitxml=coverage.xml'
             }
 
             post {
                 always {
-                    junit(keepLongStdio: true, allowEmptyResults: true, testResults: 'target/surefire-reports/TEST-*.xml')
+                    junit 'coverage.xml'
                 }
             }
         }
