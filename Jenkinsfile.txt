@@ -15,7 +15,7 @@ pipeline {
 
             post {
                 always {
-                    junit 'coverage.xml'
+                    junit 'allowEmptyResults: true, coverage.xml'
                 }
             }
         }
