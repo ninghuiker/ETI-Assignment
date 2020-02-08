@@ -1,6 +1,7 @@
 from read_and_load import *
 from view_maze import *
 from play_maze import *
+from configure_maze import *
 
 options = ['1','2','3','4']
 def mainMenu():
@@ -35,7 +36,7 @@ def mainMenu():
             elif selection=='3':
                 Play_Maze(finalList)
             elif selection=='4':
-                print ("Option 4 is currently unavaliable")
+                Configure_Maze(finalList)
         if selection=='0':
             quit()
 
