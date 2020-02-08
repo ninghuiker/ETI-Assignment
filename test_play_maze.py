@@ -9,7 +9,7 @@ from play_maze import *
 # Test that the move function allows 5 moves (WASD, M)
 def test_get_move():
     # Test that move M brings user back to main menu
-    with mock.patch("builtins.input", "m"):
+    with mock.patch("builtins.input", "?"):
         assert "Enter your input: "
 
 # Test that the move function allows for small letters
