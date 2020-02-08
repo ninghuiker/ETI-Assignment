@@ -24,6 +24,8 @@ def mainMenu():
                 View_Maze(finalList)
             elif selection=='3':
                 Play_Maze(finalList)
+            elif selection=='4':
+                print ("Option 4 is currently unavaliable")
             elif selection=='0':
                 quit()
             else:
