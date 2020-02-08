@@ -27,10 +27,10 @@ def mainMenu():
             elif selection=='0':
                 quit()
             else:
-                print("Invalid choice. Enter 1-5")
+                print("Invalid choice. Enter 0-4")
                 mainMenu()
         except ValueError:
-            print("Invalid syntax. Enter 1-5")
+            print("Invalid syntax. Enter 0-4")
     exit
 
 def Exit():
