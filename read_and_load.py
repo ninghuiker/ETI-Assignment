@@ -16,7 +16,7 @@ def Read_Load(finalList):
                 finalList = []
             save_data(finalList, userinput)
         except:
-            print("\nError: please key in the name of the data file")
+            print("\nError: please key in the correct name of the data file")
         
     else:
         print("\nError: please key in an excel file")
