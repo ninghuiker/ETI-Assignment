@@ -25,8 +25,8 @@ def Configure_Maze(finalList):
             columnN += 1
         columnN = 0
 
-    print("Configuration Menu")
-      
+    print("\nConfiguration Menu")
+    print("========================================\n")
     print("""[1] Create Wall
 [2] Create Passageway
 [3] Create start point
@@ -41,236 +41,265 @@ def Configure_Maze(finalList):
             print("========================================\n")
             for item in finalList:
                 print(item)
-                rowN += 1
-                for value in item:
-                    if value == "A":
-                        colStart = columnN
-                        rowStart = rowN
-                    elif value == "B":
-                        colEnd = columnN
-                        rowEnd = rowN   
-                    columnN += 1
-                columnN = 0
-            print("Enter the coordinate of the item you wish to change E.g Rows,Column:")
+            print("Press Enter if you wish to change an item.")
             mainORconfig=(input("'B' to return to ConfigureMenu.\n'M' to return to Main Menu:"))
             
-            if mainORconfig == "B":
+            if mainORconfig == "B" or mainORconfig == "b":
                 
                 print("========================================\n")
                 for item in finalList:             
                     print(item)
-                    rowN += 1
-                    for value in item:
-                        if value == "A":
-                            colStart = columnN
-                            rowStart = rowN
-                        elif value == "B":
-                            colEnd = columnN
-                            rowEnd = rowN   
-                        columnN += 1
-                    columnN = 0
-                print("Configuration Menu")
-
+                print("\nConfiguration Menu")
+                print("========================================\n")
                 print("""[1] Create Wall
 [2] Create Passageway
 [3] Create start point
 [4] Create end point
 [0] Exit Main Menu\n""")
                 
-            elif mainORconfig == "M":
+            elif mainORconfig == "M" or mainORconfig == "m":
                 break
-    
-          
                 
             elif mainORconfig == "":
-                value1=int(input("Enter Row:"))
-                value2=int(input("Enter Col:"))
-                value1 = rowStart
-                value2 = colStart
-                if value1 < 8:
-                 for item in finalList:
-                     finalList[value1][value2] = "X"
-                    
-                     print(item)
-                     rowStart = value1
-                     colStart = value2
+                value1=input("Enter Row:")
+                value2=input("Enter Col:")
+                try:
+                    rowChosen = int(value1)
+                    colChosen = int(value2) 
+                    if rowChosen < 8 and rowChosen > -1 and colChosen < 8 and colChosen > -1:
+                        if finalList[rowChosen][colChosen] != "X":
+                            finalList[rowChosen][colChosen] = "X"
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+                        
+                        else:
+                            print("It is already a wall.")
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+
+                except ValueError:
+                    print("Please enter a valid value.")
+
+            else:
+                print("Please enter a valid value.")
+
+
         
         # Create passage way
-        if Choice == "2":
+        elif Choice == "2":
             print("========================================\n")
             for item in finalList:
                 print(item)
-                rowN += 1
-                for value in item:
-                    if value == "A":
-                        colStart = columnN
-                        rowStart = rowN
-                    elif value == "B":
-                        colEnd = columnN
-                        rowEnd = rowN   
-                    columnN += 1
-                columnN = 0
-            print("Enter the coordinate of the item you wish to change E.g Rows,Column:")
+            print("Press Enter if you wish to change an item.")
             mainORconfig=(input("'B' to return to ConfigureMenu.\n'M' to return to Main Menu:"))
-                
-            if mainORconfig == "B":
+            
+            if mainORconfig == "B" or mainORconfig == "b":
                 
                 print("========================================\n")
                 for item in finalList:             
                     print(item)
-                    rowN += 1
-                    for value in item:
-                        if value == "A":
-                            colStart = columnN
-                            rowStart = rowN
-                        elif value == "B":
-                            colEnd = columnN
-                            rowEnd = rowN   
-                        columnN += 1
-                    columnN = 0
-                print("Configuration Menu")
-
+                print("\nConfiguration Menu")
+                print("========================================\n")
                 print("""[1] Create Wall
 [2] Create Passageway
 [3] Create start point
 [4] Create end point
 [0] Exit Main Menu\n""")
-            elif mainORconfig == "M":
+                
+            elif mainORconfig == "M" or mainORconfig == "m":
                 break
-    
-          
                 
             elif mainORconfig == "":
-                value1=int(input("Enter Row:"))
-                value2=int(input("Enter Col:"))
-                value1 = rowStart
-                value2 = colStart
-                if value1 < 8:
-                 for item in finalList:
-                     finalList[value1][value2] = "X"
-                    
-                     print(item)
-                     rowStart = value1
-                     colStart = value2
-        
+                value1=input("Enter Row:")
+                value2=input("Enter Col:")
+                try:
+                    rowChosen = int(value1)
+                    colChosen = int(value2) 
+                    if rowChosen < 8 and rowChosen > -1 and colChosen < 8 and colChosen > -1:
+                        if finalList[rowChosen][colChosen] != "O":
+                            finalList[rowChosen][colChosen] = "O"
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+                        
+                        else:
+                            print("It is already a passageway.")
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+
+                except ValueError:
+                    print("Please enter a valid value.")
+
+            else:
+                print("Please enter a valid value.")
+
+                
         #Create Start point
-        if Choice == "3":
+        elif Choice == "3":
             print("========================================\n")
             for item in finalList:
                 print(item)
-                rowN += 1
-                for value in item:
-                    if value == "A":
-                        colStart = columnN
-                        rowStart = rowN
-                    elif value == "B":
-                        colEnd = columnN
-                        rowEnd = rowN   
-                    columnN += 1
-                columnN = 0
-            print("Enter the coordinate of the item you wish to change E.g Rows,Column:")
+            print("Press Enter if you wish to change an item.")
             mainORconfig=(input("'B' to return to ConfigureMenu.\n'M' to return to Main Menu:"))
-                
-            if mainORconfig == "B":
+            
+            if mainORconfig == "B" or mainORconfig == "b":
                 
                 print("========================================\n")
                 for item in finalList:             
                     print(item)
-                    rowN += 1
-                    for value in item:
-                        if value == "A":
-                            colStart = columnN
-                            rowStart = rowN
-                        elif value == "B":
-                            colEnd = columnN
-                            rowEnd = rowN   
-                        columnN += 1
-                    columnN = 0
-                print("Configuration Menu")
-
+                print("\nConfiguration Menu")
+                print("========================================\n")
                 print("""[1] Create Wall
 [2] Create Passageway
 [3] Create start point
 [4] Create end point
 [0] Exit Main Menu\n""")
-            elif mainORconfig == "M":
+                
+            elif mainORconfig == "M" or mainORconfig == "m":
                 break
-    
-          
                 
             elif mainORconfig == "":
-                value1=int(input("Enter Row:"))
-                value2=int(input("Enter Col:"))
-                value1 = rowStart
-                value2 = colStart
-                if value1 < 8:
-                 for item in finalList:
-                     finalList[value1][value2] = "X"
-                    
-                     print(item)
-                     rowStart = value1
-                     colStart = value2
+                value1=input("Enter Row:")
+                value2=input("Enter Col:")
+                try:
+                    rowChosen = int(value1)
+                    colChosen = int(value2) 
+                    if rowChosen < 8 and rowChosen > -1 and colChosen < 8 and colChosen > -1:
+                        if finalList[rowChosen][colChosen] != "A":
+                            finalList[rowChosen][colChosen] = "A"
+                            finalList[rowStart][colStart] = "O"
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+                        
+                        else:
+                            print("It is already a start point.")
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+
+                except ValueError:
+                    print("Please enter a valid value.")
+
+            else:
+                print("Please enter a valid value.")
+                
+                            
         #Create end point
-        if Choice == "4":
+        elif Choice == "4":
             print("========================================\n")
             for item in finalList:
                 print(item)
-                rowN += 1
-                for value in item:
-                    if value == "A":
-                        colStart = columnN
-                        rowStart = rowN
-                    elif value == "B":
-                        colEnd = columnN
-                        rowEnd = rowN   
-                    columnN += 1
-                columnN = 0
-            print("Enter the coordinate of the item you wish to change E.g Rows,Column:")
+            print("Press Enter if you wish to change an item.")
             mainORconfig=(input("'B' to return to ConfigureMenu.\n'M' to return to Main Menu:"))
-                
-            if mainORconfig == "B":
+            
+            if mainORconfig == "B" or mainORconfig == "b":
                 
                 print("========================================\n")
                 for item in finalList:             
                     print(item)
-                    rowN += 1
-                    for value in item:
-                        if value == "A":
-                            colStart = columnN
-                            rowStart = rowN
-                        elif value == "B":
-                            colEnd = columnN
-                            rowEnd = rowN   
-                        columnN += 1
-                    columnN = 0
-                print("Configuration Menu")
-
+                print("\nConfiguration Menu")
+                print("========================================\n")
                 print("""[1] Create Wall
 [2] Create Passageway
 [3] Create start point
 [4] Create end point
 [0] Exit Main Menu\n""")
-            elif mainORconfig == "M":
+                
+            elif mainORconfig == "M" or mainORconfig == "m":
                 break
-    
-          
                 
             elif mainORconfig == "":
-                value1=int(input("Enter Row:"))
-                value2=int(input("Enter Col:"))
-                value1 = rowStart
-                value2 = colStart
-                if value1 < 8:
-                 for item in finalList:
-                     finalList[value1][value2] = "X"
-                    
-                     print(item)
-                     rowStart = value1
-                     colStart = value2
+                value1=input("Enter Row:")
+                value2=input("Enter Col:")
+                try:
+                    rowChosen = int(value1)
+                    colChosen = int(value2) 
+                    if rowChosen < 8 and rowChosen > -1 and colChosen < 8 and colChosen > -1:
+                        if finalList[rowChosen][colChosen] != "B":
+                            finalList[rowChosen][colChosen] = "B"
+                            finalList[rowEnd][colEnd] = "O"
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+                        
+                        else:
+                            print("It is already an end point.")
+                            print("========================================\n")
+                            for item in finalList:
+                                print(item)
+                            print("\nConfiguration Menu")
+                            print("========================================\n")
+                            print("""[1] Create Wall
+[2] Create Passageway
+[3] Create start point
+[4] Create end point
+[0] Exit Main Menu\n""")
+
+                except ValueError:
+                    print("Please enter a valid value.")
+
+            else:
+                print("Please enter a valid value.")
 
 
-        if Choice == "0":
+        elif Choice == "0":
             break
+
+        else:
+            print("Please enter a valid value.")
 
                
             
