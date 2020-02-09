@@ -8,6 +8,7 @@
 
 # LANGUAGES CHOSEN
 1. Python
+2. Pytest
 
 # PROJECT TIMELINE
 << 30th Jan - 1st Feb >>
